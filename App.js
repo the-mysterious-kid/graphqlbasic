@@ -9,6 +9,7 @@ import {
 } from "@apollo/client";
 import Body from './Container/Index';
 import GraphClient from './Container/config';
+import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 
 const client = new ApolloClient({
   uri: 'https://dentalcityserver.herokuapp.com/graphql',
@@ -17,11 +18,12 @@ const client = new ApolloClient({
 
 export default function App() {
   return (
-    <ApolloProvider client={GraphClient}>
-      <SafeAreaView>
-        <Body />
-      </SafeAreaView>
-    </ApolloProvider>
+
+      <ApolloProvider client={GraphClient}>
+        <SafeAreaView>
+          <Body />
+        </SafeAreaView>
+      </ApolloProvider>
 
   )
 }
