@@ -18,16 +18,18 @@ export default function Index() {
     }, []);
 
     const setToken = async () => {
+
+
         await AsyncStorage.setItem('token', data.login.token);
 
-        // const abc = await AsyncStorage.getItem('token');
-        // await console.log("Roles", data)
-        
     }
 
     const testToken = async() => {
         const abc = await AsyncStorage.getItem('token');
-        console.log("token recieved", abc);
+
+        // console.log('Token:', abc);
+
+        // console.log("token recieved", data && JSON.stringify(data.login.token));
     }
 
     return (

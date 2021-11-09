@@ -37,3 +37,22 @@ query GetlistRole {
   }
 }
 `;
+
+export const LIST_AGENCY = gql`
+query GetlistRole {
+  listAgency(skip: 0, limit: 10) {
+    count
+    data {
+      agencyName
+      phone
+      logo
+      contactPerson {
+        firstName
+        lastName
+      }
+      surveyCount
+      employeeCount
+    }
+  }
+}
+`;
